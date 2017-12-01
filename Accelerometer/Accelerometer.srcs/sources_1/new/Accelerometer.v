@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Accelerometer();
+module Accelerometer(input spiClk, input int1, input int2, output reg MISO, output reg MOSI, output reg CSN);
 /*  
 Input clock 1-5 MHz
 SPI Commands
@@ -20,6 +20,10 @@ SPI Commands
     ACL_INT[2]
 */
 
+    always @ (posedge spiClk)
+    begin
+        
+    end    
 
 
 endmodule
